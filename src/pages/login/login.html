@@ -1,0 +1,41 @@
+<!-- <page-nav>Logowanie</page-nav> -->
+
+<ion-content padding>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-6 mx-auto my-5">
+        <ion-card>
+          <ion-card-header class="mb-1">
+            Logowanie
+          </ion-card-header>
+          <ion-card-content>
+            <form [formGroup]="loginForm" (keyup.enter)="onSubmit($event)">
+                <ion-list>
+                      <ion-item>
+                          <ion-label floating>Login</ion-label>
+                          <ion-input formControlName="loginFormUsername" type="text" value=""></ion-input>
+                        </ion-item>
+          
+                        <ion-item>
+                          <ion-label floating>Hasło</ion-label>
+                          <ion-input formControlName="loginFormPassword" type="password"></ion-input>
+                        </ion-item>
+                  </ion-list>
+                  <div class="row">
+                      <div class="col-md-12 d-flex justify-content-around align-items-center">
+                        <input ion-button clear (click)="onSubmit($event)" value="Logowanie" class="text-left" [disabled]="!loginForm.valid">
+                        <small class="text-right">
+                          Nie masz konta?
+                          <a style="color: #005afb" (click)="redirectToRegisterPage()" alt="rejestracja">Zarejestruj się</a>
+                        </small>
+                      </div>
+                    </div>
+            </form>
+            
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

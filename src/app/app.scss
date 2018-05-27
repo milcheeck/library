@@ -14,3 +14,14 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.card-md .item-md.item-block:not(:last-child) .item-inner,
+.card-ios .item-ios.item-block:not(:last-child) .item-inner {
+    box-shadow: inset 0 -1px 0 0 #dedede;
+    border-bottom-color: #dedede !important;
+}
+
+.tabbar.show-tabbar {
+    top: 0;
+    bottom: unset;
+    height: 60px;
+}

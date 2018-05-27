@@ -1,0 +1,50 @@
+<!-- <page-nav>
+  Rejestracja
+</page-nav> -->
+
+<ion-content padding>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-6 mx-auto my-5">
+        <ion-card>
+          <ion-card-header class="mb-1">
+            Rejestracja
+          </ion-card-header>
+          <ion-card-content>
+            <form [formGroup]="registerForm" (keyup.enter)="onSubmit($event)">
+              <ion-list>
+                <ion-item>
+                  <ion-label floating>Login</ion-label>
+                  <ion-input formControlName="registerFormUsername" type="text" value=""></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label floating>Hasło</ion-label>
+                  <ion-input formControlName="registerFormPassword" type="password"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label floating>Powtórz hasło</ion-label>
+                  <ion-input formControlName="registerFormPasswordRepeat" type="password"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label floating>Email</ion-label>
+                  <ion-input formControlName="registerFormEmail" type="email"></ion-input>
+                </ion-item>
+              </ion-list>
+              <div class="row">
+                <div class="col-md-12 d-flex justify-content-around align-items-center">
+                  <input  ion-button clear (click)="onSubmit($event)" value="Rejestracja" class="text-left" [disabled]="checkIfRegisterButtonDisabled()">
+                  <button ion-button color="danger" (click)="redirectToLoginPage()" class="text-right">Anuluj</button>
+                </div>
+              </div>
+            </form>
+
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
